@@ -1,6 +1,8 @@
 import "./App.css";
 import Header from "./Components/Header";
 import React, { useState, useEffect } from "react";
+import Categories from "./Components/Categories";
+import AutoAd from "./Components/AutoAd";
 function App() {
   const [mounted, setMounted] = useState(false);
   if (!mounted) {
@@ -19,6 +21,8 @@ function App() {
   return (
     <div className="">
       <Header></Header>
+      <Categories></Categories>
+      <AutoAd></AutoAd>
     </div>
   );
 }
