@@ -4,7 +4,7 @@ import LanguageDropDownButton from "./LanguageDropDownButton";
 import Searchicon from "./Searchicon";
 export default function Header() {
   return (
-    <div className="bg-gray-100 flex">
+    <div className="bg-gray-100 flex sticky top-0 z-50">
       <div className="flex  ml-4 my-2 mr-4 w-full ">
         <HeaderTitleIcon className="mx-5"></HeaderTitleIcon>
         <div className="flex ml-4 border-black border-2 rounded-md">
