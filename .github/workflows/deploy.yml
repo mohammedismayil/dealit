@@ -32,4 +32,4 @@ jobs:
           END
     - name: Starting the Docker compose
       run: |
-         ssh staging 'cd dealit && git pull && docker-compose up'
+         ssh staging 'cd dealit && git pull && docker-compose up -d'
