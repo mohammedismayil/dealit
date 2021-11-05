@@ -15,7 +15,7 @@ app.listen(
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 );
 dotenv.config();
-mongoose.connect("mongodb://localhost:27017", {
+mongoose.connect("mongodb://mongo:27017/dealit", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
