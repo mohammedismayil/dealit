@@ -12,9 +12,13 @@ COPY package-lock.json /usr/src/app
 #RUN npm set progress=false \
 #    && npm config set depth 0 \
 #    && npm i install
+# RUN npm install
+# RUN mkdir node_modules / .cache && chmod - R 777 node_modules / .cache
+COPY --chown=node:node package.json .
 RUN npm install
-RUN mkdir node_modules / .cache && chmod - R 777 node_modules / .cache
 
+COPY --chown=node:node  . .
+USER node
 # Get all the code needed to run the app
 COPY . /usr/src/app
 
