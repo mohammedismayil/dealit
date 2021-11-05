@@ -4,7 +4,7 @@ import mongoose, { mongo } from "mongoose";
 import dotenv from "dotenv";
 const app = express();
 // const mongoose = mongoose();
-const dotenv = dotenv();
+// const dotenv = dotenv();
 
 app.use(express.json());
 
