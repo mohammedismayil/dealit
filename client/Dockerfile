@@ -12,7 +12,7 @@ COPY package-lock.json /usr/src/app
 #RUN npm set progress=false \
 #    && npm config set depth 0 \
 #    && npm i install
-# RUN npm install
+RUN npm install
 # RUN mkdir node_modules / .cache && chmod - R 777 node_modules / .cache
 COPY --chown=node:node package.json .
 RUN mkdir /usr/src/app/node_modules/.cache/ && chmod -R 777 /usr/src/app/node_modules/.cache/
