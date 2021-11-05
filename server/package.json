@@ -1,6 +1,7 @@
 {
   "name": "dealit",
   "version": "1.0.0",
+  "type": "module",
   "description": "dealit server",
   "main": "index.js",
   "scripts": {
