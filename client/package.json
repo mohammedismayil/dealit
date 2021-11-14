@@ -1,7 +1,6 @@
 {
   "name": "dealit",
   "version": "0.1.0",
-  "proxy": "http://server:3000/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.0",
