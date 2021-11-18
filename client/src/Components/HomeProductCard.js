@@ -13,7 +13,7 @@ export default function HomeProductCard() {
         <div className="bg-yellow-300 w-2 mr-5"></div>
         <div>
           <div className="text-lg font-strong">$13,333</div>
-          <div>Condition fresh laptop 8gb ram//500gbbhdd i5 laptop laptop</div>
+          <div>Condition fresh laptop 8gb ram 500gbbhdd i5 laptop laptop</div>
 
           <div className="flex flex-end">
             <div>Indirapuram, Ghaziabad</div>
