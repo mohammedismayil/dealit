@@ -27,3 +27,5 @@ EXPOSE 3000
 
 # Serve the app
 CMD ["npm", "start"]
+
+#--openssl-legacy-provider

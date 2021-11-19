@@ -1,9 +1,10 @@
 import "./App.css";
-import Header from "./Components/Header";
+
 import React, { useState, useEffect } from "react";
-import Categories from "./Components/Categories";
-import AutoAd from "./Components/AutoAd";
-import HomeProductLists from "./Components/HomeProductLists";
+
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./Pages/Home";
+import Admin from "./Pages/Admin";
 function App() {
   const [mounted, setMounted] = useState(false);
   if (!mounted) {
@@ -21,11 +22,10 @@ function App() {
   }, []);
   return (
     <div className="">
-      <Header></Header>
-      <Categories></Categories>
-      <AutoAd></AutoAd>
-      <div className="font-bold text-lg">Fresh Recommendations</div>
-      <HomeProductLists></HomeProductLists>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="admin" element={<Admin />} />
+      </Routes>
     </div>
   );
 }
