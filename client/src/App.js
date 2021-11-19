@@ -24,7 +24,7 @@ function App() {
       <Header></Header>
       <Categories></Categories>
       <AutoAd></AutoAd>
-      <div>Fresh Recommendations</div>
+      <div className="font-bold text-lg">Fresh Recommendations</div>
       <HomeProductLists></HomeProductLists>
     </div>
   );
