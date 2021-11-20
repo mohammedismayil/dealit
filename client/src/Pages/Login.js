@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 async function loginUser(credentials) {
-  return fetch("http://localhost:5000/admin", {
+  return fetch("http://localhost:5000/loginadmin", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,21 +21,26 @@ export default function Login({ setToken }) {
     setToken(token);
   };
   return (
-    <div>
-      <h1>Please Log In</h1>
+    <div className="px-20 mt-auto m-auto w-96 content-center justify-center rounded-md">
+      <h1 className="content-center justify-center flex">Please Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
-          <input type="text" onChange={(e) => setUserName(e.target.value)} />
+          <input
+            type="text"
+            onChange={(e) => setUserName(e.target.value)}
+            className="border border-black rounded-sm pl-2"
+          />
         </label>
         <label>
           <p>Password</p>
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}
+            className="border border-black rounded-sm pl-2"
           />
         </label>
-        <div>
+        <div className="content-center justify-center flex py-3">
           <button type="submit">Submit</button>
         </div>
       </form>
