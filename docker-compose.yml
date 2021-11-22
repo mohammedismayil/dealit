@@ -27,8 +27,8 @@ services:
     networks:
       - express-mongo
       - react-express
-    expose: 
-      - 5000
+    ports:
+      - 5000:5000
   mongo:
     container_name: mongo
     restart: always
