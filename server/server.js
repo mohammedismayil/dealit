@@ -32,6 +32,12 @@ mongoose
     console.error(err);
   });
 
+app.get("/userlists", function (req, res) {
+  res.send({
+    message: "welcome to this damn hell",
+  });
+});
+
 app.post("/loginadmin", (req, res) => {
   console.log(req.body);
   if (req.body.username == "admin" && req.body.password == "123456") {
