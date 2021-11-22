@@ -12,6 +12,6 @@ COPY --chown=node:node  . .
 USER node
 COPY . /usr/src/app
 
-EXPOSE 3000
+EXPOSE 5000
 
 CMD ["server.js"]
