@@ -9,8 +9,10 @@ export default function Home() {
       <Header></Header>
       <Categories></Categories>
       <AutoAd></AutoAd>
-      <div className="font-bold text-lg">Fresh Recommendations</div>
-      <HomeProductLists></HomeProductLists>
+      <div className="container pl-10 pt-10 ">
+        <div className=" text-2xl ml-10">Fresh Recommendations</div>
+        <HomeProductLists></HomeProductLists>
+      </div>
     </div>
   );
 }
