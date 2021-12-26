@@ -6,7 +6,9 @@ import bodyParser from "body-parser";
 import { ApolloServer, gql } from "apollo-server-express";
 import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import http from "http";
-import { Schema } from "./schema/schema.js";
+// import { Schema } from "./schema/schema.js";
+import resolvers from './resolvers/index.js';
+import typeDefs from './typeDefs.js';
 const app = express();
 // const mongoose = mongoose();
 // const dotenv = dotenv();
@@ -29,8 +31,8 @@ dotenv.config();
 const httpServer = http.createServer(app);
 
 const server = new ApolloServer({
-  typeDefs: Schema.typeDefs,
-  resolvers: Schema.resolvers,
+  typeDefs: typeDefs,
+  resolvers: resolvers,
 });
 
 await server.start();
