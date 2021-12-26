@@ -5,10 +5,11 @@ import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { ApolloServer, gql } from "apollo-server-express";
 import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
+import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import http from "http";
 // import { Schema } from "./schema/schema.js";
-import resolvers from './resolvers/index.js';
-import typeDefs from './typeDefs.js';
+import resolvers from "./resolvers/index.js";
+import typeDefs from "./typeDefs.js";
 const app = express();
 // const mongoose = mongoose();
 // const dotenv = dotenv();
@@ -33,7 +34,10 @@ const httpServer = http.createServer(app);
 const server = new ApolloServer({
   typeDefs: typeDefs,
   resolvers: resolvers,
+  plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
 });
+
+// https://studio.apollographql.com/sandbox/explorer
 
 await server.start();
 

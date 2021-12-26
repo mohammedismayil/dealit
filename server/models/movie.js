@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-const Movie = new Schema(
+const movieSchema = new Schema(
   {
     name: {
       type: String,
@@ -19,6 +19,6 @@ const Movie = new Schema(
     timestamps: true,
   }
 );
-
+const Movie = mongoose.model("Movies", movieSchema);
 export default Movie;
 
