@@ -65,9 +65,12 @@ app.get("/userlists", function (req, res) {
 app.post("/loginadmin", (req, res) => {
   console.log(req.body);
   if (req.body.username == "admin" && req.body.password == "123456") {
+    localStorage.setItem("token", "thisisthetoken");
     res.send({
       token: "test123",
     });
+
+ 
   } else {
     res.send({
       error: "welcome to this damn hell",

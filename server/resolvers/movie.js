@@ -1,5 +1,4 @@
 import Movie from "../models/movie.js";
-import Product from "../models/product.js";
 export default {
   Query: {
     getMovies: (parent, args) => {
@@ -50,20 +49,6 @@ export default {
           }
         }
       );
-    },
-
-    addProduct: (parent, args) => {
-      // let movie = new Movie({
-
-      // });
-      const IProduct = new Product({
-        name: args.name,
-        producer: args.producer,
-        rating: args.rating,
-      });
-
-      IProduct.save();
-      return IProduct;
     },
   },
 };
