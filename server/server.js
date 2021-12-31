@@ -6,6 +6,11 @@ import bodyParser from "body-parser";
 import { ApolloServer, gql } from "apollo-server-express";
 import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
+import {
+  GraphQLUpload,
+  graphqlUploadExpress, // A Koa implementation is also exported.
+} from "graphql-upload";
+import { finished } from "stream/promises";
 import http from "http";
 // import { Schema } from "./schema/schema.js";
 import resolvers from "./resolvers/index.js";
@@ -20,6 +25,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // parse application/json
 // app.use(bodyParser.json());
+// This middleware should be added before calling `applyMiddleware`.
+app.use(graphqlUploadExpress());
+
 
 app.use(cors());
 const PORT = process.env.PORT || 5000;
