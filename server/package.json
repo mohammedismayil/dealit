@@ -12,8 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "graphql-upload": "^13.0.0",
     "mongoose": "^6.0.12",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "cors": "^2.8.5",

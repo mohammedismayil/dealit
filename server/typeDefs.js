@@ -1,6 +1,7 @@
 import { gql } from "apollo-server-express";
 
 export default gql`
+  scalar Upload
   type Movie {
     id: ID!
     name: String!
@@ -12,15 +13,24 @@ export default gql`
     name: String!
     price: Float!
   }
+  type singleUploadResult {
+    success: String!
+    message: String!
+    mimetype: String
+    encoding: String
+    filename: String
+    location: String
+  }
   type Query {
     getMovies: [Movie]
     getMovie(id: ID!): Movie
-    getProducts: [Product]
+    getAllProducts: [Product]
   }
   type Mutation {
     addMovie(name: String!, producer: String!, rating: Float!): Movie
     updateMovie(name: String!, producer: String!, rating: Float): Movie
     deleteMovie(id: ID!): Movie
     addProduct(name: String!, price: Float!): Product
+    singleUpload(file: Upload!): singleUploadResult
   }
 `;
